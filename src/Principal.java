@@ -7,7 +7,7 @@ public class Principal {
         int opcion = 0;
         SistemaRegistro registro = new SistemaRegistro();
 
-        while(opcion != 6) {
+        while(opcion != 5) {
 
             System.out.println("*** Registro de Estudiantes ***");
             System.out.println("""
@@ -16,8 +16,7 @@ public class Principal {
                 2. Listar estudiantes
                 3. Buscar estudiante
                 4. Eliminar estudiante
-                5. Actualizar datos
-                6. Salir
+                5. Salir
                 """);
             System.out.println("Ingrese una opción del menú: ");
             opcion = teclado.nextInt();
@@ -50,12 +49,15 @@ public class Principal {
                 case 4:
                     System.out.println("Ingrese el ID del estudiante que quiere eliminar: ");
                     int idEliminar = teclado.nextInt();
-                    registro.eliminarEstudiante(idEliminar);
+                    Estudiante estudiante = registro.buscarEstudiante(idEliminar);
+                    if (estudiante != null) {
+                        registro.eliminarEstudiante(idEliminar);
+                        System.out.println("Estudiante eliminado");
+                    }else {
+                        System.out.println("No se encontró el estudiante");
+                    }
                     break;
                 case 5:
-                    System.out.println("actualizar datos");
-                    break;
-                case 6:
                     System.out.println("Gracias por utilizar el registro de estudiantes.");
                     break;
                 default:

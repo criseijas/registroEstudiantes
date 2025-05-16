@@ -36,10 +36,10 @@ public class Estudiante {
 
     @Override
     public String toString() {
-        return "Nombre: " + nombre + "\n" +
+        return "(Nombre: " + nombre + "\n" +
                 ", Apellido: " + apellido + "\n" +
                 ", Id: " + id + "\n" +
                 ", Carrera: " + carrera + "\n" +
-                ", Edad: " + edad;
+                ", Edad: " + edad + ")\n";
     }
 }

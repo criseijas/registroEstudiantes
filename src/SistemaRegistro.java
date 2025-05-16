@@ -17,21 +17,20 @@ public class SistemaRegistro {
         }
     }
 
-    public void buscarEstudiante(int id) {
+    public Estudiante buscarEstudiante(int id) {
 
         for (Estudiante alumno : estudiantes) {
             if (alumno.getId() == id) {
                 System.out.println(alumno);
-                return;
+                return alumno;
             }
         }
-        System.out.println("El id no es válido");
+        return null;
     }
 
     public void eliminarEstudiante(int id) {
 
         estudiantes.removeIf(estudiante -> estudiante.getId() == id);
-        System.out.println("Estudiante eliminado");
     }
 
 }
