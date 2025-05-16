@@ -18,3 +18,7 @@ SistemaRegistroEstudiantes/
 ├── SistemaRegistro.java
 └── Main.java
 ```
+## 🛠️ Requisitos
+
+- JDK 11 o superior
+- Editor de código o IDE (como IntelliJ, VS Code, Eclipse)
