@@ -3,6 +3,9 @@ import java.util.Scanner;
 public class Principal {
     public static void main(String[] args) {
 
+         String PURPLE = "\033[0;35m";
+         String RESET = "\u001B[0m";
+
         Scanner teclado = new Scanner(System.in);
         int opcion = 0;
         SistemaRegistro registro = new SistemaRegistro();
@@ -52,16 +55,16 @@ public class Principal {
                     Estudiante estudiante = registro.buscarEstudiante(idEliminar);
                     if (estudiante != null) {
                         registro.eliminarEstudiante(idEliminar);
-                        System.out.println("Estudiante eliminado");
+                        System.out.println(PURPLE + "Estudiante eliminado" + RESET);
                     }else {
-                        System.out.println("No se encontró el estudiante");
+                        System.out.println(PURPLE + "No se encontró el estudiante" + RESET);
                     }
                     break;
                 case 5:
-                    System.out.println("Gracias por utilizar el registro de estudiantes.");
+                    System.out.println(PURPLE + "Gracias por utilizar el registro de estudiantes." + RESET);
                     break;
                 default:
-                    System.out.println("La opción ingresada no es válida");
+                    System.out.println(PURPLE + "La opción ingresada no es válida" + RESET);
                     break;
             }
         }

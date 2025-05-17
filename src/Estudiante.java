@@ -1,5 +1,8 @@
 public class Estudiante {
 
+    public static final String CYAN = "\033[0;36m";
+    public static final String RESET = "\u001B[0m";
+
     private String nombre;
     private String apellido;
     private int id;
@@ -36,10 +39,10 @@ public class Estudiante {
 
     @Override
     public String toString() {
-        return "(Nombre: " + nombre + "\n" +
+        return CYAN + "( Nombre: " + nombre + "\n" +
                 ", Apellido: " + apellido + "\n" +
                 ", Id: " + id + "\n" +
                 ", Carrera: " + carrera + "\n" +
-                ", Edad: " + edad + ")\n";
+                ", Edad: " + edad + ")\n" + RESET;
     }
 }
