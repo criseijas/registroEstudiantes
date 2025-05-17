@@ -22,3 +22,9 @@ SistemaRegistroEstudiantes/
 
 - JDK 11 o superior
 - Editor de código o IDE (como IntelliJ, VS Code, Eclipse)
+
+## 👨‍💻 Autor
+Cristina Seijas
+
+## 📄 Licencia
+Este proyecto se distribuye bajo la licencia MIT.
